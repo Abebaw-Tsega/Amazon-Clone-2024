@@ -75,7 +75,7 @@ function Header() {
                 <span>All</span></a></li>
             </ul>
             <ul>
-              <li><a href="#">Today's Deals</a></li>
+              <li><a href="#">Today`s Deals</a></li>
               <li><a href="#">Customer Service</a></li>
               <li><a href="#">Registry</a></li>
               <li><a href="#">Gift Cards</a></li>
