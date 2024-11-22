@@ -4,6 +4,7 @@ import { CiLocationOn } from "react-icons/ci";
 import { BiCartAdd } from "react-icons/bi";
 import { RiArrowDropDownFill } from "react-icons/ri";
 import { GiHamburgerMenu } from "react-icons/gi";
+import { Link } from "react-router-dom";
 
 
 function Header() {
@@ -14,10 +15,11 @@ function Header() {
           <div className={classes.header_container}>
 
             <div className={classes.logo_container}>
-              <a href="#" ><img
+              
+              <Link to="/" ><img
                 src="https://pngimg.com/uploads/amazon/amazon_PNG25.png"
                 alt="Amazon Logo"
-              /></a>
+              /></Link>
               <div className={classes.delivery}>
                 <span className={classes.location} >
                   <CiLocationOn />
@@ -38,32 +40,32 @@ function Header() {
             </div>
 
             <div className={classes.order_container}>
-              <a href="" className={classes.language}>
+              <Link to="" className={classes.language}>
                 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAlpeuBbh3tIuc3-Wj19ylhwA2XpZ2lI-Fjg&s" className={classes.languageImg} alt="" />
                 <label name="" id="">
                   <p>EN</p>
                 </label>
                 <RiArrowDropDownFill className={classes.dropDown} />
-              </a>
+              </Link>
 
-              <a href="" className={classes.signIn}>
+              <Link to="/auth" className={classes.signIn}>
                 {/* <MdOutlineArrowDropDown /> */}
                 <p>Hello, sign in</p>
                 <span>Account & List
                   <RiArrowDropDownFill className={classes.dropDown} />
                 </span>
 
-              </a>
+              </Link>
 
-              <a href="" className={classes.Returns}>
+              <Link to="/orders" className={classes.Returns}>
                 <p>Returns</p>
                 <span>& Orders</span>
-              </a>
-              <a href="" className={classes.cart}>
+              </Link>
+              <Link to="/cart" className={classes.cart}>
                 <BiCartAdd size={35} />
                 <span>0</span>
                 <p>Cart</p>
-              </a>
+              </Link>
             </div>
 
           </div>

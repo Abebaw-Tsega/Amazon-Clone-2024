@@ -9,8 +9,8 @@
   height: 300px;
   background-image: linear-gradient(
     to bottom,
-    rgba(225, 225, 225, 0),
-    rgba(225, 225, 225)
+    rgba(241, 229, 229, 0),
+    rgb(255, 255, 255)
   )
 }
 .carousel_pointer{

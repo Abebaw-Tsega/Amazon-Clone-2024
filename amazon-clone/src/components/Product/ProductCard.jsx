@@ -10,9 +10,8 @@ const ProductCard = ({ product }) => {
         <img src={image} alt="" />
       </a>
       <div>
-        <h3>{title}</h3>
-        <div className={classes.rating} >
-          {/* rating */}
+        <h3>{title.length > 50 ? title.slice(0, 50) + "..." : title}</h3>        <div className={classes.rating} >
+
           <Rating value={rating.rate} precision={0.1} />
           {/* count */}
           <small>{rating.count}</small>
