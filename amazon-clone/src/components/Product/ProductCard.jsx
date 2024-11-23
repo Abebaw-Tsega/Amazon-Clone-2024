@@ -1,20 +1,39 @@
 import Rating from "@mui/material/Rating"
 import CurrencyFormat from "../CurrencyFormat/CurrencyFormat";
 import classes from "./product.module.css"
+import { Link } from "react-router-dom";
 
 const ProductCard = ({ product }) => {
-  const {image, title, rating, price} = product;
+  const { image, title, id, rating, price } = product;
   return (
     <div className={classes.card_container} >
-      <a href="">
+      <Link to={`/products/${id}`}>
         <img src={image} alt="" />
-      </a>
+      </Link>
       <div>
-        <h3>{title.length > 50 ? title.slice(0, 50) + "..." : title}</h3>        <div className={classes.rating} >
+        {/* <h3>{title.length > 30 ? title.slice(0, 30) + "..." : title}</h3> */}
+        {title ? (
+          <h3>{title.length > 30 ? title.slice(0, 30) + "..." : title}</h3>
+        ) : (
+          <h3>No title available</h3>
+        )}
 
-          <Rating value={rating.rate} precision={0.1} />
+        {/* <h3>{ title}</h3> */}
+        <div className={classes.rating} >
+
+          {/* <Rating value={rating.rate} precision={0.1} /> */}
+          {rating?.rate !== undefined && (
+            <Rating value={rating.rate} precision={0.1} />
+          )}
+
+          {/* console.log("Rating:", rating); */}
+          
           {/* count */}
-          <small>{rating.count}</small>
+          {/* <small>{rating.count}</small> */}
+          {rating?.count !== undefined && (
+            <small>{rating.count}</small>
+          )}
+
         </div>
         <div>
           {/* price */}
