@@ -27,7 +27,7 @@
   width: 95%;
 }
 .logo_container img:hover {
-  border: #fff 1px solid;
+  outline: #fff 1px solid;
 }
 .delivery {
   display: flex;
@@ -44,7 +44,7 @@
   /* font-size: larger; */
 }
 .delivery:hover {
-  border: #fff 1px solid;
+  outline: #fff 1px solid;
 }
 .search {
   display: flex;
@@ -101,7 +101,7 @@
   color: white;
 }
 .order_container a:hover {
-  border: #fff 1px solid;
+  outline: #fff 1px solid;
 }
 .order_container a span {
   font-weight: bold;
@@ -181,7 +181,7 @@
   padding: 8px 9px;
 }
 .header_footer ul li a:hover {
-  border: #fff 1px solid;
+  outline: #fff 1px solid;
 }
 .menu {
   display: flex;

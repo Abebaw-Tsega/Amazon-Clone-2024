@@ -11,29 +11,12 @@ const ProductCard = ({ product }) => {
         <img src={image} alt="" />
       </Link>
       <div>
-        {/* <h3>{title.length > 30 ? title.slice(0, 30) + "..." : title}</h3> */}
-        {title ? (
-          <h3>{title.length > 30 ? title.slice(0, 30) + "..." : title}</h3>
-        ) : (
-          <h3>No title available</h3>
-        )}
+        
+        <h3>{title?.length > 30 ? title.slice(0, 30) + "..." : title}</h3>
 
-        {/* <h3>{ title}</h3> */}
         <div className={classes.rating} >
-
-          {/* <Rating value={rating.rate} precision={0.1} /> */}
-          {rating?.rate !== undefined && (
-            <Rating value={rating.rate} precision={0.1} />
-          )}
-
-          {/* console.log("Rating:", rating); */}
-          
-          {/* count */}
-          {/* <small>{rating.count}</small> */}
-          {rating?.count !== undefined && (
-            <small>{rating.count}</small>
-          )}
-
+          <Rating value={rating?.rate} precision={0.1} />
+          <small>{rating?.count}</small>
         </div>
         <div>
           {/* price */}
