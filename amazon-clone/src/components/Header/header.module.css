@@ -19,12 +19,13 @@
 .logo_container {
   display: flex;
   align-items: center;
-  /* justify-content: space-between; */
+  justify-content: center;
   max-width: 13%;
 }
 
 .logo_container img {
-  width: 95%;
+  width: 96%;
+  padding: 7px 2px;
 }
 .logo_container img:hover {
   outline: #fff 1px solid;
@@ -34,13 +35,20 @@
   justify-content: center;
   align-items: center;
   cursor: pointer;
+    padding:5px 3px;
+
 }
 .delivery p {
-  font-size: 10px;
+  font-size: 12px;
   /* padding-top: 5px; */
+}
+.delivery span {
+  font-weight: bolder;
 }
 .location {
   padding-top: 15px;
+    font-size: 25px;
+
   /* font-size: larger; */
 }
 .delivery:hover {
@@ -74,7 +82,7 @@
 .search input {
   border: 1px solid white;
   width: 100%;
-  margin-right: 0px;
+  /* margin-right: 0px; */
 }
 .search svg {
   padding: 12px 18px 11px 13px;
@@ -92,8 +100,8 @@
   align-items: center;
   justify-content: center;
   max-width: 28.5%;
-  gap: 10px;
-  margin-right: 5px;
+  /* gap: 10px; */
+  /* margin-right: 5px; */
 }
 
 .order_container a {
@@ -112,7 +120,7 @@
 .language {
   width: 70px;
   display: flex;
-  padding: 25px 0px 10px 0px;
+  padding: 25px 10px 10px 0px;
   justify-content: center;
 }
 .language select {
@@ -133,13 +141,13 @@
   width: 130px;
 }
 .Returns {
-  padding: 10px 0px 10px 10px;
+  padding: 10px 10px 15px 15px;
   width: 70px;
 }
 .cart {
   position: relative;
-  padding: 10px 0px 10px 10px;
-  width: 65px;
+  padding: 6px 10px 10px 10px;
+  width: 75px;
   display: flex;
 }
 .cart span {
@@ -148,14 +156,17 @@
   top: 0px;
   font-size: 23px;
   background-color: #046e48;
-  left: 24.5px;
-  top: 4px;
+  left: 24px;
+  top: 0.8px;
   color: white;
 }
 .cart p {
   font-weight: bold;
   font-size: 13px;
   padding-top: 20px;
+}
+.cartIcon{
+  font-size: 25px;
 }
 
 /**************************/

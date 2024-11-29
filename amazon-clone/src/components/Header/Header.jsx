@@ -5,9 +5,16 @@ import { BiCartAdd } from "react-icons/bi";
 import { RiArrowDropDownFill } from "react-icons/ri";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { Link } from "react-router-dom";
+import { DataContext } from "../DataProvider/DataProvider";
+import { useContext } from "react";
 
 
 function Header() {
+
+  const [{basket}, dispatch] = useContext(DataContext);
+  // console.log(state);
+
+
   return (
     <>
       <section className={classes.header}>
@@ -62,8 +69,8 @@ function Header() {
                 <span>& Orders</span>
               </Link>
               <Link to="/cart" className={classes.cart}>
-                <BiCartAdd size={35} />
-                <span>0</span>
+                <BiCartAdd className={classes.cartIcon} size={40} />
+                <span>{basket.length} </span>
                 <p>Cart</p>
               </Link>
             </div>
