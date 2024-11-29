@@ -16,7 +16,7 @@ function Header() {
 
 
   return (
-    <>
+    <section className={classes.fixed}>
       <section className={classes.header}>
         <div className={classes.div} >
           <div className={classes.header_container}>
@@ -94,7 +94,7 @@ function Header() {
 
         </div>
       </section>
-    </>
+    </section>
   )
 }
 
