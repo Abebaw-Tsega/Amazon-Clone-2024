@@ -71,8 +71,10 @@ function Cart() {
                 <CurrencyFormat amount= {total} />
                 </div>
                 <span>
-                  <input type="checkbox" />
-                  <small>This order contains a gift</small>
+                  <p>
+                    <input type="checkbox" />
+                  <small>  This order contains a gift</small>
+                  </p>
                   <Link to="./payment">Continue to checkout</Link>
                 </span>
               </div>
