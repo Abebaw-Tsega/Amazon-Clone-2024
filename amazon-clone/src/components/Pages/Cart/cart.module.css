@@ -4,6 +4,10 @@
   justify-content: center;
   margin-top: 20px;
 }
+.container div{
+    height: auto!important;
+
+}
 .container img{
   width: 120px !important;
 }
@@ -18,10 +22,10 @@
   margin: 10px;
 }
 .subtotal{
-  display: flex;
   padding: 20px;
-  height: 120px;
-  max-width: 700px;
+  min-width: 300px;
+  height: 80%;
+  display: flex;
   flex-direction: column;
   align-items: center;
   gap: 20px;
@@ -46,7 +50,8 @@
 .subtotal a:hover{
   background: var(--primary-shade);
 }
-.subtotal >div{
+.subtotal >div,
+.subtotal span{
   display: flex;
   gap: 20px;
 }
