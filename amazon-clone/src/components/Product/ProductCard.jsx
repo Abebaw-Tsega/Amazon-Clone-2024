@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 import { DataContext } from "../DataProvider/DataProvider";
 import { Type } from "../Utility/action.type"
 
-function ProductCard({ product, flex, renderDesc }) {
+function ProductCard({ product, flex, renderDesc, renderAdd }) {
   const { image, title, id, rating, price, description } = product;
   // console.log(product)
 
@@ -31,8 +31,9 @@ function ProductCard({ product, flex, renderDesc }) {
       </Link>
 
       <div>
-        {/* <h3>{title?.length > 30 ? title.slice(0, 30) + "..." : title}</h3> */}
-        <h3>{title}</h3>
+        <h3>{title?.length > 40 ? title.slice(0, 40) + "..." : title}</h3>
+        {/* <h3>{title}</h3> */}
+
         {renderDesc && <div style={{ maxWidth: "750px" }}>
           {description}
         </div>
@@ -48,9 +49,13 @@ function ProductCard({ product, flex, renderDesc }) {
           <CurrencyFormat amount={price} />
         </div>
 
-        <button className={classes.button} onClick={addToCart} >
-          add to cart
-        </button>
+        {
+          renderAdd && <button className={classes.button} onClick={addToCart} >
+            add to cart
+          </button>
+        }
+
+        
       </div>
     </div>
   )
