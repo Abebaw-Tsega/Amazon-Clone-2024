@@ -1,18 +1,17 @@
-.login{
+.login {
   height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.login img{
+.login img {
   width: 100px;
   margin: 30px auto;
   object-fit: contain;
-  
 }
 
-.login_container{
+.login_container {
   display: flex;
   width: 350px;
   flex-direction: column;
@@ -21,23 +20,23 @@
   border-radius: 5px;
 }
 
-.login_container h1{
+.login_container h1 {
   font-size: 25px;
   margin: 20px 0;
 }
 
-.login_container form{
+.login_container form {
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
-.login_container form div{
+.login_container form div {
   display: flex;
   flex-direction: column;
   gap: 5px;
 }
 
-.login_container form input{
+.login_container form input {
   margin-bottom: 10px;
   padding: 8px 16px;
   background-color: white;
@@ -45,12 +44,13 @@
   border: none;
   border: 1px solid lightgray;
   border-radius: 3px;
+  box-sizing: border-box;
 }
-.login_container form input:focus{
+.login_container form input:focus {
   outline: 2px solid skyblue;
 }
-.login_signInButton{
-  border:  none;
+.login_signInButton {
+  border: none;
   background: #f0c14b;
   border-radius: 5px;
   width: 100%;
@@ -59,14 +59,14 @@
   cursor: pointer;
 }
 
-.login_signInButton:hover{
+.login_signInButton:hover {
   background-color: var(--primary-shade);
 }
-.login_container p{
+.login_container p {
   padding: 10px 0px;
   font-size: 13px;
 }
-.login_createButton{
+.login_createButton {
   border: none;
   border-radius: 5px;
   width: 100%;
@@ -75,6 +75,6 @@
   cursor: pointer;
 }
 
-.login_createButton:hover{
+.login_createButton:hover {
   background-color: lightgray;
 }
