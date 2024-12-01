@@ -7,15 +7,16 @@ import { GiHamburgerMenu } from "react-icons/gi";
 import { Link } from "react-router-dom";
 import { DataContext } from "../DataProvider/DataProvider";
 import { useContext } from "react";
+import { auth } from "../Utility/firebase";
 
 
 function Header() {
 
-  const [{ basket }, dispatch] = useContext(DataContext);
-  
+  const [{ user, basket }, dispatch] = useContext(DataContext);
+
   const totalItem = basket?.reduce((amount, item) => {
     return item.amount + amount
-  },0)
+  }, 0)
 
 
   return (
@@ -25,7 +26,7 @@ function Header() {
           <div className={classes.header_container}>
 
             <div className={classes.logo_container}>
-              
+
               <Link to="/" ><img
                 src="https://pngimg.com/uploads/amazon/amazon_PNG25.png"
                 alt="Amazon Logo"
@@ -58,12 +59,25 @@ function Header() {
                 <RiArrowDropDownFill className={classes.dropDown} />
               </Link>
 
-              <Link to="/auth" className={classes.signIn}>
-                {/* <MdOutlineArrowDropDown /> */}
-                <p>Hello, sign in</p>
-                <span>Account & List
-                  <RiArrowDropDownFill className={classes.dropDown} />
-                </span>
+              <Link to={!user && "/auth"} className={classes.signIn} >
+                <div>
+                  {
+                    user ? (
+                      <>
+                        <p>Hello {user.email?.split("@")[0]}</p>
+                        <span onClick={()=>auth.signOut()}>Sign Out</span>
+                      </>
+                    ) : (
+                      <>
+                        <p>Hello, sign In</p>
+                        <span>Account & List
+                          <RiArrowDropDownFill className={classes.dropDown} />
+                        </span>
+                      </>
+                    )
+                  }
+                </div>
+
 
               </Link>
 
