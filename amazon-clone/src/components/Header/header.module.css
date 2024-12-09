@@ -3,10 +3,11 @@
 }
 /*******************/
 
-.fixed{
+.fixed {
   position: sticky;
   top: 0;
-  z-index: 100;;
+  z-index: 100;
+  overflow: hidden;
 }
 
 .header_container {
@@ -30,7 +31,7 @@
 }
 
 .logo_container img {
-  width: 96%;
+  width: 96px;
   padding: 7px 2px;
 }
 .logo_container img:hover {
@@ -41,8 +42,7 @@
   justify-content: center;
   align-items: center;
   cursor: pointer;
-    padding:5px 3px;
-
+  padding: 5px 3px;
 }
 .delivery p {
   font-size: 12px;
@@ -53,7 +53,7 @@
 }
 .location {
   padding-top: 15px;
-    font-size: 25px;
+  font-size: 25px;
 
   /* font-size: larger; */
 }
@@ -63,11 +63,11 @@
 .search {
   display: flex;
   align-items: center;
-  justify-content: center;
+  /* justify-content: center; */
   border-radius: 5px;
   overflow: hidden;
-  width: 65%;
-  /* flex-grow: 1; */
+  width: 100%;
+  flex-grow: 1;
 }
 .search select,
 .search input {
@@ -124,7 +124,7 @@
   font-size: 13px;
 }
 .language {
-  width: 70px;
+  min-width: 70px;
   display: flex;
   padding: 25px 10px 10px 0px;
   justify-content: center;
@@ -144,16 +144,16 @@
 }
 .signIn {
   padding: 10px 0px 10px 10px;
-  width: 130px;
+  min-width: 130px;
 }
 .Returns {
   padding: 10px 10px 15px 15px;
-  width: 70px;
+  min-width: 70px;
 }
 .cart {
   position: relative;
   padding: 6px 10px 10px 10px;
-  width: 75px;
+  max-width: 75px;
   display: flex;
 }
 .cart span {
@@ -171,7 +171,7 @@
   font-size: 13px;
   padding-top: 20px;
 }
-.cartIcon{
+.cartIcon {
   font-size: 25px;
 }
 
@@ -217,5 +217,18 @@
   align-items: center;
 }
 
-
 /* ************ */
+@media screen and (max-width:676px) {
+  .header_container{
+    display: flex;
+    flex-direction: column !important;
+    height: auto;
+  }
+  .lower_container ul list-style:not(:first-child){
+    display: none;
+  }
+  .language{
+    display: none;
+  }
+  
+}

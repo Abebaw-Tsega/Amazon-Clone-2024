@@ -28,6 +28,7 @@
   position: relative;
   margin-top: -15%;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 20px;
   place-items: center;
 }

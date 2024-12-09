@@ -61,8 +61,7 @@ function Header() {
 
               <Link to={!user && "/auth"} className={classes.signIn} >
                 <div>
-                  {
-                    user ? (
+                  {user ? (
                       <>
                         <p>Hello {user.email?.split("@")[0]}</p>
                         <span onClick={()=>auth.signOut()}>Sign Out</span>
@@ -77,23 +76,22 @@ function Header() {
                     )
                   }
                 </div>
-
-
               </Link>
 
               <Link to="/orders" className={classes.Returns}>
                 <p>Returns</p>
                 <span>& Orders</span>
               </Link>
+
               <Link to="/cart" className={classes.cart}>
                 <BiCartAdd className={classes.cartIcon} size={40} />
                 <span>{totalItem} </span>
                 <p>Cart</p>
               </Link>
             </div>
-
           </div>
         </div>
+
         <div className={classes.header_footer}>
           <div className={classes.menu}>
             <ul>
